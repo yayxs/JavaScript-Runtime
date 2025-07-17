@@ -207,28 +207,43 @@ WinterCG 是一个社区小组，致力于在所有 JavaScript 运行时（包�
 
 不同的 JavaScript 运行时各有特色，适用于不同的场景：
 
-| 特性                | Node.js  | Deno                | Bun            | WinterJS      |
-| ------------------- | -------- | ------------------- | -------------- | ------------- |
-| **引擎**            | V8       | V8                  | JavaScriptCore | SpiderMonkey  |
-| **TypeScript 支持** | 需要配置 | 原生支持            | 原生支持       | 原生支持      |
-| **安全模型**        | 无限制   | 权限系统            | 无限制         | 权限系统      |
-| **包管理**          | npm/yarn | URL 导入 + npm 兼容 | 内置包管理器   | URL 导入      |
-| **Web 标准**        | 部分支持 | 优先支持            | 部分支持       | WinterCG 标准 |
-| **生态系统**        | 最成熟   | 快速发展            | 快速发展       | 新兴          |
-| **性能**            | 成熟稳定 | 高性能              | 极高性能       | 优化中        |
+| 特性                | 浏览器     | Node.js  | Deno                | Bun            | WinterJS      |
+| ------------------- | ---------- | -------- | ------------------- | -------------- | ------------- |
+| **主要引擎**        | V8/JSC/SM  | V8       | V8                  | JavaScriptCore | SpiderMonkey  |
+| **运行环境**        | 客户端     | 服务端   | 服务端/边缘计算     | 服务端         | 服务端/边缘   |
+| **TypeScript 支持** | 需要编译   | 需要配置 | 原生支持            | 原生支持       | 原生支持      |
+| **安全模型**        | 沙箱+同源  | 无限制   | 权限系统            | 无限制         | 权限系统      |
+| **包管理**          | ES模块/CDN | npm/yarn | URL 导入 + npm 兼容 | 内置包管理器   | URL 导入      |
+| **Web 标准**        | 完全支持   | 部分支持 | 优先支持            | 部分支持       | WinterCG 标准 |
+| **生态系统**        | Web 生态   | 最成熟   | 快速发展            | 快速发展       | 新兴          |
+| **主要用途**        | 前端应用   | 后端服务 | 现代后端/CLI 工具   | 高性能后端     | 边缘计算      |
 
 **选择建议**：
 
-- **Node.js**：适合大型企业项目，需要稳定性和丰富生态系统
+- **浏览器**：前端应用开发，用户界面和交互逻辑
+- **Node.js**：适合大型企业项目，需要稳定性和丰富生态系统的后端服务
 - **Deno**：适合注重安全性的项目，或希望使用现代 JavaScript/TypeScript 特性
 - **Bun**：适合追求极致性能的项目，或希望简化工具链的开发者
-- **WinterJS**：适合需要跨运行时兼容性的项目
+- **WinterJS**：适合需要跨运行时兼容性的边缘计算项目
 
 ## 总结与展望
 
-从 V8、JavaScriptCore 等核心引擎，到浏览器、Node.js 等成熟环境，再到 Deno、Bun、WinterJS 等新生力量，JavaScript 运行时的世界充满了活力和创新。
+JavaScript 运行时的演进历程展现了技术不断发展的轨迹：
 
-对于初学者而言，理解运行时的基本构成（引擎 + API + 事件循环）是迈向更深层次理解 JavaScript 的关键一步。对于经验丰富的开发者来说，关注 Deno、Bun、WinterJS 等新一代运行时，以及 WinterCG 等标准化动向，将帮助你把握未来的技术趋势。
+**第一代**：浏览器作为 JavaScript 的诞生地，为前端开发奠定了基础
+**第二代**：Node.js 将 JavaScript 带到服务器端，开启了全栈 JavaScript 的时代
+**第三代**：Deno、Bun、WinterJS 等新兴运行时，致力于解决前代的痛点并引入现代化特性
+
+从 V8、JavaScriptCore、SpiderMonkey 等核心引擎，到浏览器、Node.js 等成熟环境，再到 Deno、Bun、WinterJS 等新生力量，JavaScript 运行时的世界充满了活力和创新。
+
+**对于不同阶段的开发者**：
+
+- **初学者**：建议从浏览器环境开始，理解运行时的基本构成（引擎 + API + 事件循环），然后学习 Node.js 掌握服务器端开发
+- **前端开发者**：深入理解浏览器运行时的特性，关注 Web 标准的发展
+- **后端开发者**：在 Node.js 基础上，可以探索 Deno 或 Bun 等现代运行时的优势
+- **架构师**：需要根据项目需求选择合适的运行时，平衡性能、安全性、生态系统等因素
+
+关注新一代运行时的发展，以及 WinterCG 等标准化动向，将帮助你把握未来的技术趋势。
 
 AI 时代，底层技术或许会变得更加“透明”，但理解这些基础概念，能让你在面对层出不穷的新工具和框架时，始终保持清晰的认知和判断力。
 
@@ -236,8 +251,23 @@ AI 时代，底层技术或许会变得更加“透明”，但理解这些基�
 
 如果你想深入探索，这里有一些不错的资源：
 
+**运行时官方网站**：
+
+- **Node.js**: [https://nodejs.org/](https://nodejs.org/)
+- **Deno**: [https://deno.com/](https://deno.com/)
+- **Bun**: [https://bun.sh/](https://bun.sh/)
+- **WinterCG**: [https://wintercg.org/](https://wintercg.org/)
+
+**浏览器引擎与运行时**：
+
+- **V8 引擎**: [https://v8.dev/](https://v8.dev/)
+- **SpiderMonkey**: [https://spidermonkey.dev/](https://spidermonkey.dev/)
+- **JavaScriptCore**: [https://developer.apple.com/documentation/javascriptcore](https://developer.apple.com/documentation/javascriptcore)
+- **Chrome DevTools Protocol**: [https://chromedevtools.github.io/devtools-protocol/](https://chromedevtools.github.io/devtools-protocol/)
+
+**深入学习资源**：
+
+- **JavaScript 引擎工作原理**: [https://blog.sessionstack.com/how-javascript-works-inside-the-v8-engine-5-tips-on-how-to-write-optimized-code-ac089e62b12e](https://blog.sessionstack.com/how-javascript-works-inside-the-v8-engine-5-tips-on-how-to-write-optimized-code-ac089e62b12e)
+- **事件循环详解**: [https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick)
 - **Best of JS (Runtimes)**: [https://bestofjs.org/projects?tags=runtime](https://bestofjs.org/projects?tags=runtime)
-- **WinterCG Official Site**: [https://wintercg.org/](https://wintercg.org/)
-- **Bun Official Site**: [https://bun.sh/](https://bun.sh/)
-- **Deno Official Site**: [https://deno.com/](https://deno.com/)
-- **Node.js Official Site**: [https://nodejs.org/](https://nodejs.org/)
+- **JavaScript 运行时性能对比**: [https://github.com/SaltyAom/bun-http-framework-benchmark](https://github.com/SaltyAom/bun-http-framework-benchmark)
